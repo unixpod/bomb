@@ -6,28 +6,34 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int valores, par[5], impar[5], x, y, i, j;
-    for (i=0;i<16;i++){
+    int valores, par[5], impar[5], x=0, y, i, j=0;
+    for (i=0;i<15;i++){
         cin >> valores;
+
             if (valores % 2 == 0) {            
-                for (x=0;x<=5;x++) {
 
-                    par[x]+=valores;            
+                    par[x]+=valores;
+                    x++;            
 
+                        cout << "par[" << x - 1 << "] = " << valores << endl;
+                        if (x == 5) {
+                            x=0;
+                        }
                 }
-                        cout << "par[" << x << "] = " << valores << endl;
                 if (valores % 2 == 1) {
-                    for (j=0;j<=5;j++) {
                         
                         impar[j]+=valores;
-                }
-                        cout << "impar[" << j << "] = " << valores << endl;
+                        j++;
+                        cout << "impar[" << j - 1 << "] = " << valores << endl;
+                        if (j == 5) {
+                            j=0;
+                        }
 
                 }
             }
 
             
-    }
     return 0;
-}
+    }
+
 
