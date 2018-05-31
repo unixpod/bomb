@@ -9,18 +9,24 @@ int main(){
     int valores, par[5], impar[5], x, y, i, j;
     for (i=0;i<16;i++){
         cin >> valores;
-            for (x=0;x<=5;x++) {
-                if (valores % 2 == 0) {
-                    par[x]+=valores;
-                    cout << "par[" << x << "] = " << valores << endl;
+            if (valores % 2 == 0) {            
+                for (x=0;x<=5;x++) {
+
+                    par[x]+=valores;            
 
                 }
+                        cout << "par[" << x << "] = " << valores << endl;
                 if (valores % 2 == 1) {
-                    impar[x]+=valores;
-                    cout << "impar[" << x << "] = " << valores << endl;
+                    for (j=0;j<=5;j++) {
+                        
+                        impar[j]+=valores;
+                }
+                        cout << "impar[" << j << "] = " << valores << endl;
 
                 }
             }
+
+            
     }
     return 0;
 }
