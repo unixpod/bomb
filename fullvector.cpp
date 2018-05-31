@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int valores, par[5], impar[5], x=0, y, i, j=0;
+    int valores, par[5], impar[5], x=0, y, i, j=0, z;
     for (i=0;i<15;i++){
         cin >> valores;
 
@@ -15,8 +15,11 @@ int main(){
                     par[x]+=valores;
                     x++;            
 
-                        cout << "par[" << x - 1 << "] = " << valores << endl;
-                        if (x == 5) {
+                    
+                        if (x == 4) {
+                            for (x=0;x<5;x++){
+                                cout << "par[" << x << "] = " << par[x]<< endl;
+                            }
                             x=0;
                         }
                 }
@@ -24,14 +27,25 @@ int main(){
                         
                         impar[j]+=valores;
                         j++;
-                        cout << "impar[" << j - 1 << "] = " << valores << endl;
-                        if (j == 5) {
+                        if (j == 4) {
+                            for (j=0;j<5;j++){
+                                 cout << "impar[" << j << "] = " << impar[j] << endl;
+
+                            }
                             j=0;
                         }
 
                 }
+                
             }
+            for(int z =0; z<x;z++  ){
+                cout << "par[" << z << "]" << impar[z] << endl;
 
+            }
+            for (int z =0; z<j;z++){
+                cout << "impar[ =" << z << "]" << par[z] << endl;
+
+            }
             
     return 0;
     }
